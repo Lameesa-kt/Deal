@@ -1,0 +1,43 @@
+sources:
+  customer-db:
+    kind: "sqlite"
+    database: "customer.sqlite"
+
+tools:
+  get-customer-info:
+    kind: sqlite-sql
+    source: customer-db
+    description: "Get FULL customer information (Customer_ID, Company_Name, Annual_Volume, Discount_Structure, Rebate_Structure) by Company_Name. Use this when user asks for customer info, details, or information about a company."
+    parameters:
+      - name: company_name
+        type: string
+        description: The company name to search for (partial or full)
+    statement: SELECT * FROM customer WHERE Company_Name LIKE '%' || ? || '%'
+
+  get-customer-id:
+    kind: sqlite-sql
+    source: customer-db
+    description: Get only Customer_ID by Company_Name (LIKE search). Use this ONLY when you specifically need just the ID number.
+    parameters:
+      - name: company_name
+        type: string
+        description: The company name (partial or full)
+    statement: SELECT Customer_ID FROM customer WHERE Company_Name LIKE '%' || ? || '%' ORDER BY Customer_ID LIMIT 1
+
+  get-customer-by-id:
+    kind: sqlite-sql
+    source: customer-db
+    description: "Get full customer record by Customer_ID (all fields: Customer_ID, Company_Name, Annual_Volume, Discount_Structure, Rebate_Structure)"
+    parameters:
+      - name: customer_id
+        type: integer
+        description: The Customer_ID of the customer
+    statement: SELECT * FROM customer WHERE Customer_ID = ?
+
+  list-customers:
+    kind: sqlite-sql
+    source: customer-db
+    description: "List all customers with Customer_ID and Company_Name. Use this to get a complete list of all customers in the database."
+    parameters: []
+    statement: SELECT Customer_ID, Company_Name FROM customer ORDER BY Customer_ID
+

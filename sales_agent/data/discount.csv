@@ -1,0 +1,13 @@
+Tier,Min_Volume,Discount_Rate,Service_Type
+Gold,100000,40,Ground
+Gold,100000,45,2nd Day Air
+Gold,100000,50,Next Day Air
+Gold,100000,35,International
+Silver,50000,30,Ground
+Silver,50000,35,2nd Day Air
+Silver,50000,40,Next Day Air
+Silver,50000,25,International
+Bronze,25000,20,Ground
+Bronze,25000,25,2nd Day Air
+Bronze,25000,30,Next Day Air
+Bronze,25000,15,International

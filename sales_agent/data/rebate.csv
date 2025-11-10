@@ -1,0 +1,7 @@
+Tier,Min_Volume,Rebate_Percentage,Max_Rebate
+Gold,100000,2,5000
+Gold,150000,3,7500
+Silver,50000,1.5,3000
+Silver,75000,2,4000
+Bronze,25000,1,1500
+Bronze,40000,1.5,2000

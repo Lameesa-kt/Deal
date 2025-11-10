@@ -1,0 +1,41 @@
+{
+    "bidStart": {
+        "bidHead": {
+            "ver": null,
+            "templateName": "Test-DYM",
+            "templateMaster": "D220834788",
+            "sttDte": "2028-06-17",
+            "reg": null,
+            "rateTypCd": "01-US",
+            "owner": "Hareesh Surabhi",
+            "origBid": null,
+            "lastModDte": "2025-06-18",
+            "estAnnGrs": 2075,
+            "endDte": "2029-06-16",
+            "dist": null,
+            "dealStatus": "P",
+            "dealRsn": "Conversion",
+            "creDte": "2025-06-18",
+            "creBxId": "YHW7BFN",
+            "cny": "US",
+            "billToCny": "US",
+            "bidNum": "D300888892",
+            "bidName": "Test-US-Hareesh-18/06"
+        },
+        "bidAcct": [
+            {
+                "payTermUpd": null,
+                "payTermCodeUpd": null,
+                "payTermCode": "01",
+                "payTerm": "7",
+                "cwtTierClsUpd": null,
+                "cwtTiercls": "06",
+                "ccEligUpd": null,
+                "ccElig": "Yes",
+                "abrEnabUpd": null,
+                "abrEnab": "Y",
+                "acet": "00000289WW"
+            }
+        ]
+    }
+}

@@ -1,0 +1,4 @@
+Customer_ID,Company_Name,Annual_Volume,Discount_Structure,Rebate_Structure
+1,"CompanyABC","$104,500","Ground: 40% off published rates, 2nd Day Air: 45% off, Next Day Air: 50% off, International: 35% off","2% of total annual spend if they hit $100K, 3% if they hit $150K"
+2,"TechCorp Solutions","$87,200","Ground: 35% off published rates, 2nd Day Air: 40% off, Next Day Air: 45% off, International: 30% off","1.5% of total annual spend if they hit $75K, 2.5% if they hit $120K"
+3,"Global Logistics Inc","$156,800","Ground: 45% off published rates, 2nd Day Air: 50% off, Next Day Air: 55% off, International: 40% off","2.5% of total annual spend if they hit $100K, 3.5% if they hit $150K, 4% if they hit $200K"
