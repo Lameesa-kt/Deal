@@ -38,8 +38,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-class QueryRequest(BaseModel):
-    query: str
 
 # Global agent instance
 agent = None
@@ -92,15 +90,15 @@ async def startup_event():
 @app.get("/")
 async def root():
     return {
-        "message": "Sales Agent API is running. Use /query endpoint to interact with the agent.",
+        "message": "Sales Agent API is running. Use /search endpoint to interact with the agent.",
         "endpoints": {
-            "POST /query": "Send a query to the agent",
+            "GET /search?q=your_search_term": "Search for information using the agent",
             "GET /docs": "Interactive API documentation"
         }
     }
 
-@app.post("/query")
-async def handle_query(request: QueryRequest):
+@app.get("/search")
+async def handle_query(search: str):
     if agent is None:
         raise HTTPException(
             status_code=500,
@@ -108,32 +106,35 @@ async def handle_query(request: QueryRequest):
         )
     
     try:
-        if not request.query.strip():
+        if not search.strip():
             raise HTTPException(
                 status_code=400,
-                detail="Query cannot be empty"
+                detail="Search query cannot be empty"
             )
             
-        logger.info(f"Processing query: {request.query}")
+        logger.info(f"Processing search query: {search}")
         
         # Process the query directly with the agent
-        response = await agent.run(request.query)
+        response = await agent.run(search)
         
         # Handle the response
         if hasattr(response, 'response'):
             response_text = str(response.response)
         else:
             response_text = str(response)
-            
-        logger.info("Query processed successfully")
+        
+        # Clean up the response text
+        response_text = response_text.replace('assistant:', '').strip()
+        
+        logger.info("Search completed successfully")
         return {"response": response_text}
         
     except Exception as e:
         error_msg = str(e)
-        logger.error(f"Error processing query: {error_msg}")
+        logger.error(f"Error processing search: {error_msg}")
         
         status_code = 500
-        detail = f"Error processing your request: {error_msg}"
+        detail = f"Error processing your search: {error_msg}"
         
         if "503" in error_msg or "overloaded" in error_msg.lower():
             status_code = 503
