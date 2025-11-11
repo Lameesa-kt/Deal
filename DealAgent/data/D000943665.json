@@ -1,0 +1,41 @@
+{
+    "bidStart": {
+        "bidHead": {
+            "ver": null,
+            "templateName": "NH US fixed",
+            "templateMaster": "D0000942066",
+            "sttDte": "2029-10-06",
+            "reg": "03",
+            "rateTypCd": "04-US",
+            "owner": "Ira Feshchyn",
+            "origBid": null,
+            "lastModDte": "2025-07-17",
+            "estAnnGrs": 2075,
+            "endDte": "2029-10-13",
+            "dist": null,
+            "dealStatus": "P",
+            "dealRsn": "Retention",
+            "creDte": "2025-07-17",
+            "creBxId": "dcr0qcy",
+            "cny": "US",
+            "billToCny": "US",
+            "bidNum": "D000943665",
+            "bidName": "US IF 0717 _2"
+        },
+        "bidAcct": [
+            {
+                "payTermUpd": null,
+                "payTermCodeUpd": null,
+                "payTermCode": "01",
+                "payTerm": "7",
+                "cwtTierClsUpd": null,
+                "cwtTiercls": "06",
+                "ccEligUpd": null,
+                "ccElig": "Yes",
+                "abrEnabUpd": null,
+                "abrEnab": "Y",
+                "acet": "00000289WW"
+            }
+        ]
+    }
+}

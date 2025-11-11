@@ -1,0 +1,54 @@
+{
+  "bidStart": {
+    "bidHead": {
+      "ver": null,
+      "templateName": "PDBD KFDhfid",
+      "templateMaster": "D001003339",
+      "sttDte": "2025-09-27",
+      "reg": "16",
+      "rateTypCd": "01-1",
+      "owner": "Marcus Persson",
+      "origBid": "0001133442",
+      "lastModDte": "2025-09-26",
+      "estAnnGrs": 2904828,
+      "endDte": "2099-01-03",
+      "dist": "12",
+      "dealStatus": "P",
+      "dealRsn": "Conversion",
+      "creDte": "2025-09-17",
+      "creBxId": "XLQOBBL",
+      "cny": "SE",
+      "billToCny": "SE",
+      "bidNum": "D001149370",
+      "bidName": "By Crea AB"
+    },
+    "bidAcct": [
+      {
+        "payTermUpd": null,
+        "payTermCodeUpd": null,
+        "payTermCode": "03",
+        "payTerm": "30",
+        "cwtTierClsUpd": null,
+        "cwtTiercls": null,
+        "ccEligUpd": null,
+        "ccElig": null,
+        "abrEnabUpd": null,
+        "abrEnab": null,
+        "acet": "00008905R1"
+      },
+      {
+        "payTermUpd": null,
+        "payTermCodeUpd": null,
+        "payTermCode": "03",
+        "payTerm": "20",
+        "cwtTierClsUpd": null,
+        "cwtTiercls": null,
+        "ccEligUpd": null,
+        "ccElig": "yes",
+        "abrEnabUpd": null,
+        "abrEnab": "Y",
+        "acet": "0000G8R287"
+      }
+    ]
+  }
+}
